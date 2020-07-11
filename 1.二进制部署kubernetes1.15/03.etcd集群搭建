@@ -4,6 +4,7 @@ wget https://github.com/coreos/etcd/releases/download/v3.3.12/etcd-v3.3.12-linux
 2.新建目录
 mkdir -p /etcd/{bin,conf,data}
 将etcdctl和etcd程序拷贝到/etcd/bin下 并修改为可执行
+cp etcd etcdctl  /etcd/bin/
 cd /etcd/bin/ && chmod +x etcdctl && chmod +x etcd
 3.修改etcd配置文件 /etcd/conf/etcd.conf
  IP 10.204.55.241上的 /etcd/conf/etcd.conf配置
