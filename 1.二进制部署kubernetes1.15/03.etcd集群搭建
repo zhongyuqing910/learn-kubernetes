@@ -1,6 +1,6 @@
 1.etcd 3个节点下载etcd
 wget https://github.com/coreos/etcd/releases/download/v3.3.12/etcd-v3.3.12-linux-amd64.tar.gz
- IP 10.204.55.241/133/134 版本为3.3.1
+ IP 10.204.55.241/242/243 版本为3.3.1
 2.新建目录
 mkdir -p /etcd/{bin,conf,data}
 将etcdctl和etcd程序拷贝到/etcd/bin下 并修改为可执行
