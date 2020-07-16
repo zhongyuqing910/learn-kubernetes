@@ -9,11 +9,11 @@ kubectl create clusterrolebinding kubelet-nodes \
   --clusterrole=system:node \
   --group=system:nodes
   2.配置kubelet 配置文件
-  主机：10.204.243.132
+  主机：10.204.55.241
   cat /app/kubernetes/config/kubelet-config.yaml
   kind: KubeletConfiguration
 apiVersion: kubelet.config.k8s.io/v1beta1
-address: "10.204.243.132"
+address: "10.204.55.241"
 syncFrequency: 1m
 fileCheckFrequency: 20s
 httpCheckFrequency: 20s
@@ -55,7 +55,7 @@ containerLogMaxFiles: 10
 KUBELET_ARGS=" --pod-infra-container-image=10.204.57.39/common/pause-amd64:3.0 --runtime-cgroups=/systemd/system.slice --bootstrap-kubeconfig=/app/kubernetes/ssl/bootstrap.kubeconfig --kubeconfig=/app/kubernetes/ssl/kubelet.kubeconfig --cert-dir=/app/kubernetes/ssl --image-pull-progress-deadline=15m --root-dir=/app/kubernetes/data/kubelet  "
 LOGS="--logtostderr=false --v=2 --log-dir=/app/kubernetes/logs"
 CONFIG="--config=/app/kubernetes/config/kubelet-config.yaml"
-HOSTNAME="--hostname-override=10.204.243.132"
+HOSTNAME="--hostname-override=10.204.55.241"
 
 
 cat /usr/lib/systemd/system/kubelet.service 
